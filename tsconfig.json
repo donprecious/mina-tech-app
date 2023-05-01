@@ -1,0 +1,42 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "target": "es2017",
+    "lib": ["es2017", "esnext.asynciterable"],
+    "typeRoots": ["node_modules/@types"],
+    "allowSyntheticDefaultImports": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "forceConsistentCasingInFileNames": true,
+    "moduleResolution": "node",
+    "module": "commonjs",
+    "pretty": true,
+    "sourceMap": true,
+    "declaration": true,
+    "outDir": "dist",
+    "allowJs": true,
+    "noEmit": false,
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "importHelpers": true,
+    "baseUrl": "src",
+    "paths": {
+      "@/*": ["*"],
+      "@application/*":["application/*"],
+      "@domain/*":["domain/*"],
+      "@infrastructure/*":["infrastructure/*"],
+      "@presentation/*":["presentation/*"],
+      "@config": ["config"],
+      "@controllers/*": ["presentation/controllers/*"],
+      "@database": ["infrastructure/database"],
+      "@exceptions/*": ["application/exceptions/*"],
+      "@interfaces/*": ["application/interfaces/*"],
+      "@middlewares/*": ["presentation/middlewares/*"],
+      "@models/*": ["infrastructure/persistence/models/*"],
+      "@routes/*": ["presentation/routes/*"],
+      "@utils/*": ["utils/*"]
+    }
+  },
+  "include": ["src/**/*.ts", "src/**/*.json", ".env"],
+  "exclude": ["node_modules", "src/http", "src/logs"]
+}
